@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L 的小作品集</title>
+<style>
+  :root {
+    --bg0: #03050b; --text: #e3eafb; --dim: #96a7c9; --faint: #5f6f94;
+    --accent: #6ea8ff; --border: rgba(126, 164, 255, 0.14);
+    --panel: rgba(10, 16, 33, 0.72);
+    --font: "PingFang SC", "HarmonyOS Sans SC", "Microsoft YaHei", "Segoe UI", system-ui, sans-serif;
+    --mono: "SF Mono", "Cascadia Code", Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    min-height: 100vh; font-family: var(--font); color: var(--text);
+    background: radial-gradient(120% 90% at 50% 20%, #111d3a 0%, #080e1e 46%, #03050b 100%);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 72px 24px 48px; }
+  header { margin-bottom: 40px; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 12px; margin-bottom: 18px;
+    background:
+      radial-gradient(circle at 32% 30%, #ffd9a0 0%, #ff9d5c 22%, transparent 40%),
+      radial-gradient(circle at 68% 66%, #7fdcff 0%, #4d7cff 30%, transparent 55%),
+      linear-gradient(135deg, #1a2450, #0a1024);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.12), 0 0 22px rgba(110,168,255,.35);
+  }
+  h1 { font-size: 26px; font-weight: 800; letter-spacing: .5px; }
+  .sub { color: var(--faint); font-size: 13px; margin-top: 6px; }
+  .list { display: flex; flex-direction: column; gap: 14px; }
+  a.card {
+    display: block; text-decoration: none; color: inherit;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 20px; backdrop-filter: blur(14px);
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  a.card:hover {
+    transform: translateY(-2px); border-color: rgba(126,164,255,.32);
+    box-shadow: 0 14px 40px rgba(0,0,0,.4), 0 0 24px rgba(110,168,255,.12);
+  }
+  .card-top { display: flex; align-items: baseline; gap: 10px; }
+  .card h2 { font-size: 16.5px; font-weight: 700; }
+  .card .date { font-family: var(--mono); font-size: 11px; color: var(--faint); margin-left: auto; }
+  .card p { font-size: 12.5px; color: var(--dim); line-height: 1.7; margin-top: 7px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 11px; }
+  .tag {
+    font-size: 10.5px; color: #cfe0ff; padding: 2px 9px; border-radius: 20px;
+    background: rgba(110,168,255,.12); border: 1px solid rgba(110,168,255,.28);
+  }
+  .go { font-size: 12px; color: var(--accent); margin-top: 12px; display: inline-block; }
+  footer { margin-top: 44px; font-size: 11px; color: var(--faint); line-height: 1.8; }
+  footer code { font-family: var(--mono); color: var(--dim); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark"></div>
+    <h1>L 的小作品集</h1>
+    <div class="sub">一些自用的网页 / 工具小 demo · 托管于 GitHub Pages</div>
+  </header>
+  <div class="list">
+    <a class="card" href="./electron-cloud-3d/">
+      <div class="card-top"><h2>电子云 · 3D 轨道演示</h2><span class="date">2026-11</span></div>
+      <p>类氢原子 1s → 4f 共 30 个轨道的概率密度 |ψ|² 三维可视化：22 万粒子电子云、90% 概率面（轨道边界面）、节面显示、径向分布曲线、12 秒环绕视频导出。教学演示用，单文件离线可跑。</p>
+      <div class="tags"><span class="tag">Three.js</span><span class="tag">WebGL</span><span class="tag">物理可视化</span><span class="tag">单文件</span></div>
+      <span class="go">打开 →</span>
+    </a>
+  </div>
+  <footer>
+    作品陆续补充中。<br>
+    想加点什么或有建议，欢迎开 issue：<code>github.com/TingnikuaiyuKeqing1120/tiny-works</code>
+  </footer>
+</div>
+</body>
+</html>
